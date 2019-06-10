@@ -24,7 +24,6 @@ str_cli(FILE *fp, CYASSL* ssl)
 	int		n = 0;
 	pinMode(29,OUTPUT);
 
-
 	printf("Rozpoczeto transmisje.");	
 
 	while (Fgets(sendline, MAXLINE, fp) != NULL) {
@@ -41,9 +40,10 @@ str_cli(FILE *fp, CYASSL* ssl)
 		Fputs(recvline, stdout);
 		
 		char c = recvline[0];
-
 		int i = c - '0';
-		printf("%d", i);
+		
+		printf("%s", recvline);
+
 		if (i == 1){
 			
 			Fputs("\n Succeso.\n", stdout);
