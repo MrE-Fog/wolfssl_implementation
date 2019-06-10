@@ -23,7 +23,9 @@ str_cli(FILE *fp, CYASSL* ssl)
 	char	sendline[MAXLINE], recvline[MAXLINE];
 	int		n = 0;
 	pinMode(29,OUTPUT);
-	
+
+
+	printf("Rozpoczeto transmisje.");	
 
 	while (Fgets(sendline, MAXLINE, fp) != NULL) {
 
@@ -62,7 +64,6 @@ main(int argc, char **argv)
 	pinMode (29, OUTPUT) ;
 
 	digitalWrite (29,  LOW) ; delay (500) ;
-
 	
 	/* define a signal handler for when the user closes the program 
        with Ctrl-C */
